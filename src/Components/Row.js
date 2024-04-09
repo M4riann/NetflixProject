@@ -1,14 +1,15 @@
-import React, { Fragment, useEffect, useState, useRef } from "react";
+import React, {useEffect, useState } from "react";
 import axios from "../axios";
 import "../Components/Row.css" 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+
 const base_url = "https://image.tmdb.org/t/p/original";
 
 
 
 
-const Row = ({ title, fetchUrl }) => {
+const Row = ({ title="", fetchUrl }) => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
