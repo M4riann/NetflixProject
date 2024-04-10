@@ -1,9 +1,116 @@
 .homepageBackground{
-    /* z-index: -1; */
     width: 100%;
     height: 100%;
-    background-image: url("../images/peakpx.jpg");
-    object-fit: cover;
-
+    margin-bottom: 6%;
 }
 
+#toggleButton{
+    background-color: transparent;
+    border: none;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    bottom:29%;
+    left: 88.5%;
+}
+
+.soundButtons{
+    width: 68%;
+    height: 68%;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 15px;
+
+}
+.soundButtons:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+.backgroundVideo{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    
+}
+
+#ageRestriction{
+    position: relative;
+    bottom:36%;
+    left: 93%;
+    color: white;
+    width: 7%;
+    height: 5.5%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(83, 81, 81, 0.48);
+    border-left: 4px solid white;
+    padding: 16px;
+    font-family: "navBarTextFontMedium";
+    font-size: 20px;
+    
+}
+.titleRow{
+    font-family: "navBarTextFontMedium";
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+#strangerThingsTitle{
+    font-family: "strangerThings";
+    font-size: 50px;
+    color: white;
+    margin-bottom: 50px;
+}
+
+#onScreenDetails{
+    position: relative;
+    bottom:75%;
+    left: 5%;
+    width: 40%;
+    
+}
+.onScreenButtons{
+    display: flex;
+}
+.strangerThingsInfo{
+    width: 300px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.185);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: "strangerThingsInfoPlay";
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+}
+.strangerThingsInfo:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+
+.strangerThingsPlayButton{
+    width: 200px;
+    height: 50px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: "strangerThingsInfoPlay";
+    font-size: 20px;
+}
+.strangerThingsPlayIcon{
+    width: 10%;
+    height: 30px;
+    margin-right: 10px;}
+.strangerThingsPlayButton:hover{
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.strangerThingsInfoIcon{
+    width: 10%;
+    height: 30px;
+    margin-left: 20px;
+    margin-right: 10px;
+}

@@ -7,6 +7,16 @@
     font-family: "navBarTextFontMedium";
     src: local("GothicA1-Medium"), url("../Fonts/GothicA1-Medium.ttf");
 }
+
+@font-face {
+    font-family: "strangerThings";
+    src: local("StrangerThingsFont") ,url("../Fonts/StrangerThingsFont.ttf");
+}
+
+@font-face {
+    font-family: "strangerThingsInfoPlay";
+    src: local("GothicA1-Bold") ,url("../Fonts/GothicA1-Bold.ttf");
+}
 .navBar{
     z-index: 1;
     width: 100%;

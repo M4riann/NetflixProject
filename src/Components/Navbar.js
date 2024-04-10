@@ -25,11 +25,15 @@ const Navbar = () => {
                     backgroundColor: navColor,
                     opacity: "0.95",
                     transition: "all 0.9s"
-                  }}>
+                    
+                  }}
+                  >
+                     
                     <div className='navBar__homePage'>
                         <Link className="navBar__home" to="/homePage">{
                             <img id="logo" src={require("../images/netflixLogo.png")} alt="netflixLogo"/>
-                        }</Link>
+                                                                                                        }
+                        </Link>
                     </div>
 
                     <div className='navBar__seriale'>

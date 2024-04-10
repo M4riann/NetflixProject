@@ -24,7 +24,7 @@ const Row = ({ title="", fetchUrl }) => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 6,
+      items: 5,
       slidesToSlide: 3 // optional, default to 1.
     },
     tablet: {
@@ -43,9 +43,7 @@ const Row = ({ title="", fetchUrl }) => {
     
         <div className="row">
         <h2>{title}</h2>
-        {/* <button className="PreviousButton" onClick={previous}>
-          Previous
-        </button> */}
+      
         <Carousel
         swipeable={false}
         responsive={responsive}
@@ -73,9 +71,7 @@ const Row = ({ title="", fetchUrl }) => {
      
       </Carousel>
        
-      {/* <button className="NextButton" onClick={next}>
-          Next
-        </button> */}
+     
     </div>
     
   )
