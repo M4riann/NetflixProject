@@ -2,6 +2,7 @@ import React, { Fragment, useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import "../Components/Navbar.css"
 import "../images/netflixLogo.png"
+
 const Navbar = () => {
     const [navColor, setNavColor] = useState("transparent")
 
@@ -16,7 +17,7 @@ const Navbar = () => {
       };
     }, []);
     
-    
+    const activeColor= ["white", "green"]
     
     return(
             <Fragment>
@@ -37,7 +38,7 @@ const Navbar = () => {
                     </div>
 
                     <div className='navBar__seriale'>
-                        <Link className="navbarSerialeTag navBarText" to="/seriale">Seriale</Link>
+                        <Link  className="navbarSerialeTag navBarText" to="/seriale">Seriale</Link>
                     </div>
 
                     <div className='navBar__filme'>
@@ -51,6 +52,9 @@ const Navbar = () => {
                     <div className="navBar__noiTrending">
                         <Link className="navbarTrendingTag navBarText" to="/noi-trending">Noi și populare</Link>
                     </div>
+                    {/* <div  className="navBar__searchBar">
+                      <SearchEngine fetchUrl={requests.fetchNetflixOriginals}/>
+                    </div> */}
                 </div>
             </Fragment>
         )

@@ -17,6 +17,11 @@
     font-family: "strangerThingsInfoPlay";
     src: local("GothicA1-Bold") ,url("../Fonts/GothicA1-Bold.ttf");
 }
+
+@font-face {
+    font-family: "madMaxTitle";
+    src:  local("MadMaxTitle"),url("../Fonts/Reporter\ Regular.ttf");
+}
 .navBar{
     z-index: 1;
     width: 100%;
@@ -41,5 +46,9 @@
     text-decoration: none;
     font-family: "navBarTextFontMedium";
     font-size: 14px;
+}
+
+.navBar__searchBar{
+    margin-left: 40%;
 }
 

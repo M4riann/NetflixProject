@@ -9,6 +9,7 @@ import Filme from './NavbarRoutes/Filme'
 import NoiSiPopulare from './NavbarRoutes/NoiSiPopulare'
 import FiltrareLimbaj from './NavbarRoutes/FiltrareLimbaj'
 import NoPage from './NavbarRoutes/NoPage';
+import Search from './Components/Search';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
                 <Route path='/filme' element={<Filme/>}/>
                 <Route path='/noi-trending' element={<NoiSiPopulare/>}/>
                 <Route path='/filtrare' element={<FiltrareLimbaj/>}/>
+                <Route path='/search' element={<Search/>}/>
                 {/* <Route path='*' element={<NoPage/>}/> */}
             </Routes>
     </Fragment>

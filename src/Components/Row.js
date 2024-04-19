@@ -16,6 +16,7 @@ const Row = ({ title="", fetchUrl }) => {
     async function fetchData() {
       const request = await axios.get(fetchUrl);
       setMovies(request.data.results);
+      console.log(request.data.results)
       return request;
     }
     fetchData();
@@ -56,15 +57,15 @@ const Row = ({ title="", fetchUrl }) => {
           className="row__posters">
              
                 {movies.map((movie, index) => (
-
+                  
                 <img className="row_posters_images"
 
                 key={index}
                 src={`${base_url}${movie.poster_path}`}
-                alt={movie.name}
+                alt={movie.title}
                 
             />
-
+            
         ))}
       
       
