@@ -22,7 +22,7 @@ const Row = ({ title="", fetchUrl, isBigRow, isBigArrow=false}) => {
   const [selectedMovie, isSelectedMovie] = useState(null)
   const [openModal, isOpelModal] = useState(false)
   const [isError, setIsError] = useState(false);
-
+  const [showTitle, setTitle] = useState(false)
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(fetchUrl);
@@ -81,7 +81,13 @@ const Row = ({ title="", fetchUrl, isBigRow, isBigArrow=false}) => {
     
    isOpelModal(false);
   }
+  const ShowTitle = (movie) =>{
+    setTitle(movie)
 
+  }
+const HideTitle = () =>{
+  setTitle(false)
+}
   return (
      <Fragment>
         <div className={`row ${isBigRow && "row_big"}`}>
@@ -102,19 +108,28 @@ const Row = ({ title="", fetchUrl, isBigRow, isBigArrow=false}) => {
         itemClass={`item ${isBigRow && "big_poster_item"}`}
         
           className="row__posters">
-              
-                {movies.map((movie, index) => (
-                  
-                <img className={`row_posters_images ${isBigRow && "row_posters_big"}`}
-                onClick={()=>TrailerPlayHandler(movie)}
-                key={index}
-                src={`${base_url}${isBigRow? movie.poster_path : movie.backdrop_path}`}
-                alt={movie.title}
+            {movies.map((movie, index) => (
+                  <div 
+                onMouseEnter={()=>ShowTitle(movie)}
+                onMouseLeave={HideTitle}
+                key={index} 
+                >
                 
-            />
-            
+                  
+                <img 
+
+                 className={`row_posters_images item ${isBigRow && "row_posters_big"}`}
+                src={`${base_url}${isBigRow? movie.poster_path : movie.backdrop_path}`}
+                alt={movie.title}/>
+                        {showTitle === movie && 
+                       ( <div id="titleContainer">
+                        <p id="titleOnHover"  style={{color:"white", position:"fixed", top:"58px"}}>{movie.title}</p>
+                        <button onClick={()=>TrailerPlayHandler(movie)} id="trailerPlay" className={`${isBigRow && "buttonOnHoverBigRow"} `}  style={{color:"white", position:"fixed", top:"100px"}}>Play Trailer</button>
+                        </div>)}
+                </div>  
+
         ))}
-     
+
       
      
       </Carousel>

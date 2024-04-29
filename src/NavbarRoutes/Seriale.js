@@ -21,6 +21,7 @@ const Seriale = ({isBigRow=true, isBigArrow=true}) =>{
     const [trailerURL, setIsTrailerURL] = useState("");
     const [openModal, isOpelModal] = useState(false)
     const [moviesPosters, setIsMoviePoster] = useState([]);
+    const [showTitle, setTitle] = useState(false)
 
     useEffect(()=>{
         async function fetchTv(){
@@ -61,13 +62,15 @@ const Seriale = ({isBigRow=true, isBigArrow=true}) =>{
             console.log(setIsTrailerURL)
           })
          
-          .catch((error)=>window.alert("Nu s-a putut gasi trailer pentru acest film, incercati altul"))
-    
-        }
+          .catch((error)=>{
+            isOpelModal(false);
+            window.alert("Nu s-a putut gasi trailer pentru acest film, incercati altul")
+          })
+            
         
         
          isOpelModal(true);
-      }
+      }}
     
       const ModalOpenereHandler = () =>{
     
@@ -92,6 +95,13 @@ const Seriale = ({isBigRow=true, isBigArrow=true}) =>{
           slidesToSlide: 1 // optional, default to 1.
         }
       };
+      const ShowTitle = (movie) =>{
+        setTitle(movie)
+    
+      }
+    const HideTitle = () =>{
+      setTitle(false)
+    }
     return(
         <Fragment>
            
@@ -119,15 +129,22 @@ const Seriale = ({isBigRow=true, isBigArrow=true}) =>{
           className="row__posters">
               
                 {setTVSerie.map((tvSerie, index) => (
-                  
-                <img className={`row_posters_images ${isBigRow && "row_posters_big"}`}
-                onClick={()=>TrailerPlayHandler(tvSerie)}
-                key={index}
-                src={`${base_url}${isBigRow? tvSerie.poster_path : tvSerie.backdrop_path}`}
-                alt={tvSerie.title}
-                
-            />
-            
+                  <div
+                  onMouseEnter={()=>ShowTitle(tvSerie)}
+                  onMouseLeave={HideTitle}
+                  key={index} 
+                  >
+                    <img className={`row_posters_images ${isBigRow && "row_posters_big"}`}
+                    src={`${base_url}${isBigRow? tvSerie.poster_path : tvSerie.backdrop_path}`}
+                    alt={tvSerie.title}
+                    
+                />
+                 {showTitle === tvSerie && 
+                       ( <div id="titleContainer">
+                        <p id="titleOnHover"  style={{color:"white", position:"fixed", top:"58px"}}>{tvSerie.title}</p>
+                        <button onClick={()=>TrailerPlayHandler(tvSerie)} id="trailerPlay" className={`${isBigRow && "buttonOnHoverBigRow"} `}  style={{color:"white", position:"fixed", top:"100px"}}>Play Trailer</button>
+                        </div>)}
+                  </div>
         ))}
      
       
@@ -185,5 +202,6 @@ const Seriale = ({isBigRow=true, isBigArrow=true}) =>{
 
 
 }
+
 
 export default Seriale;
