@@ -1,0 +1,26 @@
+
+
+.genresButtons{
+    margin-top: 50px;
+    position: relative;
+    top:-100%;
+    left: 2.3%;
+    height: 0%;
+    display: flex;
+}
+#showGenresButton{
+ width: 90px;
+ height: 30px;
+ /* margin-top: 80px; */
+ border: 1px solid white;
+ background-color: rgba(0, 0, 0, 0.253);
+ color: white;
+ font-size: 18px;
+ padding: 2px;
+ position: relative;
+ top:40px;
+ cursor: pointer;
+}
+#showGenresButton:hover{
+    background-color: rgba(0, 0, 0, 0.43);
+}

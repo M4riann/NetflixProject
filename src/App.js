@@ -7,22 +7,25 @@ import { Route,Routes, Router } from 'react-router-dom';
 import Seriale from './NavbarRoutes/Seriale';
 import Filme from './NavbarRoutes/Filme'
 import NoiSiPopulare from './NavbarRoutes/NoiSiPopulare'
-import FiltrareLimbaj from './NavbarRoutes/FiltrareLimbaj'
 import NoPage from './NavbarRoutes/NoPage';
-import Search from './Components/Search';
+import SearchResults from './Components/SearchResults';
+import GenreSelectedMovies from './Components/GenreSelectedMovies';
+
 
 function App() {
   return (
     
     <Fragment>
             <Routes>
-                <Route path='/homePage' element={<HomePage/>}/> 
+                <Route path='/homepage' element={<HomePage/>}/> 
                 <Route path='/seriale' element={<Seriale/>}/>
                 <Route path='/filme' element={<Filme/>}/>
-                <Route path='/noi-trending' element={<NoiSiPopulare/>}/>
-                <Route path='/filtrare' element={<FiltrareLimbaj/>}/>
-                <Route path='/search' element={<Search/>}/>
-                {/* <Route path='*' element={<NoPage/>}/> */}
+             
+                <Route path="/search/:query" element={<SearchResults/>} />
+                <Route path="/movies/:genreId" element={<GenreSelectedMovies/>}/>
+                <Route path='*' element={<NoPage/>}/>
+                <Route path='/search/:query/*' element={<NoPage/>}/>
+           
             </Routes>
     </Fragment>
       

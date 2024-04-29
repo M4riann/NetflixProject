@@ -1,13 +1,13 @@
 .row__posters{
     width: 100%;
-    height: 10% !important;
+    height: 309px !important;
     display: flex !important;
     align-items: center;
     flex-wrap: wrap;
     overflow-x: hidden;
     overflow-y: hidden; 
     position: relative;
-    
+    margin-bottom: 0;
 }
 
 
@@ -16,7 +16,8 @@
     width: 98%;
     position: relative;
     left: 2%;
-    margin-bottom: 5%;
+    
+   
 }
 
 
@@ -28,53 +29,69 @@
     
 }
 
-.item{
-     padding: 10px;
-    
-}
-ul{
-    width: 320px !important;
-    height: 270px !important;
-    
-    
-    position: relative;
-    
-}
-.react-multiple-carousel__arrow {
-    height: 200px;
-    
-    border-radius: 0px !important;
-}
-.react-multiple-carousel__arrow--left {
-    left:-5px !important;
-    border-radius: 3% !important;
-    top:10px;
-    height: 220px;
-} 
 
-.react-multiple-carousel__arrow--right{
-    left: 98%;
-    border-radius: 3% !important;
-    position: relative;
-    
-    top:10px;
-    height: 220px;
+.big_poster_item{
+    width: 220px !important;
 }
+
 .row_posters_images{
-    width: 330px;
-    height: 220px;
-    margin-right: 10px ;
+    width: 350px;
+    height: 100%;
+    margin-right: 0px ;
     transition: transform 450ms;
     border-radius: 3%;
-   
+    object-fit: contain;
     position: relative;
-    
+    margin-top: 5px;
 }
 
 .row_posters_images:hover{
-    transform: scale(1.08);
+    transform: scale(1.05);
 }
 
+.row_posters_big{
+    width: 200px;
+    height: 330px;
+    object-fit: contain;
+    
+    
+}
 
+.row_big{
+     position: relative;
+    left:-3% ; 
+    width: 103%;  
+    top:-30px;
+    background-color: transparent;
+    
+}
+.row_big_genresMovies{
+    position: relative;
+    top:-35%;
+    width: 100%;
+    left: 0%;
+}
+
+.react-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.react-player {
+    
+    position: relative; 
+   
+  }
+  
+.react-player > div {
+    background-color: #141414;
+    
+  }
 
 

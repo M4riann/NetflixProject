@@ -1,0 +1,33 @@
+#homeButton{
+    color: white;
+    width: 200px;
+    height: 50px;
+    border: 2px solid white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    text-decoration: none;
+
+}
+
+#container{
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/221067-P1O4VU-734.jpg");
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 3%;
+}
+
+.containerTitle{
+    color: white;
+    font-size: 150px;
+}
+.containerText{
+    color: white;
+    font-size: 50px;
+}

@@ -1,0 +1,28 @@
+.genresButtonActive{
+    background-color: rgb(0, 0, 0.9);
+    width: 200px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.genresButtonInActive{
+    display: none;
+
+}
+.GenresButtonsActivator{
+    width: 120px;
+    height:35px;
+    background-color: black;
+    color: white;
+    border: 1px white solid;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: left;
+    font-weight: 600;
+}
+.GenresButtonsActivator:hover{
+    background-color:transparent
+}
+

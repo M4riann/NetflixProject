@@ -1,29 +1,29 @@
 import React, { Fragment, useState, useEffect} from "react";
 import { Link } from "react-router-dom";
-import "../Components/Navbar.css"
+import "../Components/NavbarGenres.css"
 import "../images/netflixLogo.png"
 import SearchEngine from "../Components/SearchEngine"
 import { IoSearchOutline } from "react-icons/io5";
 import { useClickAway } from "@uidotdev/usehooks";
 import GenresButtons from "./GenresButtons";
-const Navbar = ({isSearchBarNavbar=false, position="fixed"}) => {
+const NavbarGenres = ({isSearchBarNavbar=false, genresButtons}) => {
     const [navColor, setNavColor] = useState("transparent")
     const [searchIcon, setSearchIcon] = useState(false)
     const ref = useClickAway(() => {
       setSearchIcon(false);
     });
-  
+    const listenScrollEvent = () => {
+      window.scrollY > 25 ? setNavColor("#090909") : setNavColor("transparent");
+      
+    };
     useEffect(() => {
-      const listenScrollEvent = () => {
-        window.scrollY > 25 ? setNavColor("#090909") : setNavColor("transparent");
-      };
       window.addEventListener("scroll", listenScrollEvent);
       return () => {
         window.removeEventListener("scroll", listenScrollEvent);
       };
-    },[]);
-   
-
+    }, []);
+    
+    const activeColor= ["white", "green"]
     const SearchIconHandler = () => {
       setSearchIcon(true);
     };
@@ -33,13 +33,12 @@ const Navbar = ({isSearchBarNavbar=false, position="fixed"}) => {
     }
     return(
             <Fragment>
-                 <div className={isSearchBarNavbar ? 'navbar__search' : 'navBar'}
+                 <div className={isSearchBarNavbar ? 'navbar__search' : 'navBarGenres'}
                   style={{
                     backgroundColor: navColor,
                     opacity: "0.95",
                     transition: "all 0.9s",
-                    position:position
-
+                   
                   }}
                   >
                      
@@ -58,9 +57,8 @@ const Navbar = ({isSearchBarNavbar=false, position="fixed"}) => {
                         <Link className="navbarFilmeTag navBarText" to="/filme">Filme</Link>
                     </div>
 
-                  
 
-               
+                    
                     <div  className="navBar__searchBar">
                             {searchIcon?(
                               <div className="searchBarIconAnimation" ref={ref} onClick={() =>HideSearchIcon}>
@@ -72,11 +70,10 @@ const Navbar = ({isSearchBarNavbar=false, position="fixed"}) => {
                               </div>
                             )}
                     </div>
-                   
                 </div>
-              
+
             </Fragment>
         )
 }
 
-export default Navbar;
+export default NavbarGenres;

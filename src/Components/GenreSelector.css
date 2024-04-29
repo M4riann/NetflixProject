@@ -1,0 +1,23 @@
+#genresContainer{
+    display: flex;
+    flex-direction:row;
+    background-color: rgba(0, 0, 0, 0.418);
+    color: white;
+    width: 200px;
+    height: 100px;
+    z-index: 1;
+    position: relative;
+    flex-wrap: wrap;
+    border: 0.5px solid white;
+    top:69px;
+    left: -90px;
+}
+
+.selectorButtons{
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.418);
+    color: white;
+    border: none;
+    cursor: pointer;
+
+}

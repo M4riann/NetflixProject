@@ -1,0 +1,29 @@
+
+.react-multiple-carousel__arrow--right:hover{
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.bigArrowRight{
+    left: 94%;
+    width: 60px;
+    border-radius: 3% !important;
+    position: relative;
+    top:-319px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    border: none;
+}
+
+.smallArrowRight{
+    left: 94%;
+    width: 60px;
+    border-radius: 3% !important;
+    position: relative;
+    top:-196px;
+    height: 196px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    border: none;
+}
+
