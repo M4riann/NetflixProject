@@ -6,7 +6,7 @@ import GenreSelectedMovies from "../Components/GenreSelectedMovies";
 import NoImageFound from "../images/NoImageFound";
 import Footer from "../Components/Footer";
 const Filme = () =>{
-    const NetflixHorrorTitle = <h1 className="titleRow" style={{color:"white"}}>Filme de groază</h1>
+    const NetflixHorrorTitle =<h1 className="titleRow" style={{color:"white"}}>Filme de groază</h1>
     const NetflixActionMoviesTitle = <h1 className="titleRow" style={{color:"white"}}>Filme de acțiune</h1>
     const NetflixComedyTitle = <h1 className="titleRow" style={{color:"white"}}>Filme de comedie</h1>
     const NetflixRomanceTitle = <h1 className="titleRow" style={{color:"white"}}>Filme romantice</h1>
