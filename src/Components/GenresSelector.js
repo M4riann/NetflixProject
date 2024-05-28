@@ -1,11 +1,9 @@
 import React from "react";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Components/GenreSelector.css"
-import { useClickAway } from "@uidotdev/usehooks";
 
 const GenresSelector = () =>{
-    
+
     const navigate = useNavigate();
    
   

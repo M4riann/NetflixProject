@@ -16,7 +16,7 @@ const base_url = "https://image.tmdb.org/t/p/original";
 
 
 
-const Row = ({ title="", fetchUrl, isBigRow, isBigArrow=false}) => {
+const RowBig = ({ title="", fetchUrl, isBigRow, isBigArrow=false}) => {
   const [movies, setMovies] = useState([]);
   const [trailerURL, setIsTrailerURL] = useState("");
   const [selectedMovie, isSelectedMovie] = useState(null)
@@ -36,11 +36,12 @@ const Row = ({ title="", fetchUrl, isBigRow, isBigArrow=false}) => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 4,
+      items: 8,
       slidesToSlide: 2, // optional, default to 1.
     
     }
   };
+  const trailer = "trailer"
   const TrailerPlayHandler = ( movie) =>{
     if(trailerURL){
       setIsTrailerURL("");  
@@ -78,13 +79,13 @@ const HideTitle = () =>{
 }
   return (
      <Fragment>
-        <div className={`row ${isBigRow && "row_big"}`}>
+        <div className={"row_big"}>
         <h2>{title}</h2>
       
         <Carousel
         
-        customLeftArrow={isBigArrow? <LeftArrowBig/>  : <LeftArrow/>}
-        customRightArrow={isBigArrow? <RightArrowBig/> :<RightArrow/>}
+        customLeftArrow={<LeftArrowBig/> }
+        customRightArrow={ <RightArrowBig/> }
         arrows={true}
         swipeable={false}
         responsive={responsive}
@@ -92,7 +93,7 @@ const HideTitle = () =>{
         infinite={true}
         centerMode={true}
         customTransition="all 0.8s"
-        itemClass={`item ${isBigRow && "big_poster_item"}`}
+        itemClass={"big_poster_item"}
         
           className="row__posters">
             {movies.map((movie, index) => (
@@ -105,13 +106,13 @@ const HideTitle = () =>{
                   
                 <img 
 
-                 className={`row_posters_images item ${isBigRow && "row_posters_big"}`}
-                src={`${base_url}${isBigRow? movie.poster_path : movie.backdrop_path}`}
+                 className="row_posters_big"
+                src={`${base_url}${movie.poster_path}`}
                 alt={movie.title}/>
                         {showTitle === movie && 
                        ( <div id="titleContainer">
-                        <p id="titleOnHover"  style={{color:"white", position:"fixed", top:"58px"}}>{movie?.title || movie?.original_name || movie?.name}</p>
-                        <button onClick={()=>TrailerPlayHandler(movie)} id="trailerPlay" className={`${isBigRow && "buttonOnHoverBigRow"} `}  style={{borderRadius:"5%",color:"white", position:"fixed", top:"100px"}}>Play Trailer</button>
+                        <p id="titleOnHover"  style={{color:"white", position:"fixed", top:"58px"}}>{movie.title}</p>
+                        <button onClick={()=>TrailerPlayHandler(movie)} id="trailerPlay" className={`${isBigRow && "buttonOnHoverBigRow"} `}  style={{color:"white", position:"fixed", top:"-5px", left:"0px"}}>Play Trailer</button>
                         </div>)}
                 </div>  
 
@@ -164,5 +165,5 @@ const HideTitle = () =>{
     </Fragment>
   )
 };
-
-export default Row;
+ 
+export default RowBig;

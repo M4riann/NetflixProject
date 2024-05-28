@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 
 #ageRestriction{
@@ -58,26 +59,12 @@
     
 }
 
-/* #ageRestriction{
-    position: relative;
-    bottom:36%;
-    left: 93%;
-    color: white;
-    width: 7%;
-    height: 5.5%;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: rgba(83, 81, 81, 0.48);
-    border-left: 4px solid white;
-    padding: 16px;
-    font-family: "navBarTextFontMedium";
-    font-size: 20px;
-    
-} */
+
 .titleRow{
     font-family: "navBarTextFontMedium";
     font-size: 32px;
-    margin-bottom: 5px;
+    margin-bottom: -5px;
+    margin-left: 50px;
 }
 
 .strangerThingsTitle{
@@ -148,4 +135,14 @@
     height: 30px;
     margin-left: 20px;
     margin-right: 10px;
+}
+
+#movieDescription{
+    font-family: "Oswald", sans-serif;
+    font-weight: 700 !important;
+    max-width:50%;    
+}
+
+#bannerBackground{
+    filter: brightness(65%);
 }

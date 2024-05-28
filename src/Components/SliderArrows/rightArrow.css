@@ -4,24 +4,24 @@
 }
 
 .bigArrowRight{
-    left: 94%;
+    left: 94.4%;
     width: 60px;
     border-radius: 3% !important;
     position: relative;
-    top:-319px;
-    height: 300px;
+    top:-321px;
+    height: 310px;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 5px;
     border: none;
 }
 
 .smallArrowRight{
-    left: 94%;
+    left: 94.4%;
     width: 60px;
     border-radius: 3% !important;
     position: relative;
-    top:-202px;
-    height: 198px;
+    top:-215px;
+    height: 208px;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 5px;
     border: none;

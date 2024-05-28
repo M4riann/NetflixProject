@@ -6,7 +6,7 @@
 
 .row__posters{
     width: 100%;
-    height: 309px !important;
+    height: 330px !important;
     display: flex !important;
     align-items: center;
     flex-wrap: wrap;
@@ -19,9 +19,9 @@
 
 .row{
     background-color: #141414;
-    width: 98%;
+    width: 100%;
     position: relative;
-    left: 2%;
+    /* left: 2%; */
     
    
 }
@@ -38,39 +38,48 @@
 
 .big_poster_item{
     width: 220px !important;
+    margin-top: 30px;
 }
 
 .row_posters_images{
-    width: 350px;
-    height: 100%;
+    width: 375px;
     margin-right: 0px ;
     transition: transform 450ms;
     border-radius: 3%;
     object-fit: contain;
     position: relative;
+    padding: 3px;
     margin-top: 5px;
+
 }
 
 .row_posters_images:hover{
     transform: scale(1.05);
+    filter: brightness(65%);
+
 }
 
 .row_posters_big{
-    width: 200px;
-    height: 330px;
+    width: 220px;
+    height: 320px;
     object-fit: contain;
+    padding: 3px;
     
-    
+}
+.row_posters_big:hover{
+    transform: scale(1.05);
+    transition: transform 450ms;
+    filter: brightness(65%);
+
 }
 
 .row_big{
      position: relative;
-    left:-3% ; 
-    width: 103%;  
+    left:-5.2% ; 
+    width: 105.2%;  
     top:-30px;
     background-color: transparent;
-    
-}
+    }
 .row_big_genresMovies{
     position: relative;
     top:-35%;
@@ -113,9 +122,8 @@
     width: 90px;
     height:40px ;
     border: none;
-    border-radius: 5px;
     animation: myAnim 0.5s ease-out 0s 1 normal forwards;
-
+    width: 220px !important;
 
 }
 @keyframes myAnim {
@@ -139,6 +147,6 @@
 .buttonOnHoverBigRow{
     color: white;
     position: fixed;
-    top:220px !important;
+    top:190px;
     left: 50px;
 }

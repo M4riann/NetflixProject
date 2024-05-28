@@ -8,7 +8,7 @@ const NoPage = () => {
                 <h1 className="containerTitle">Te-ai pierdut?</h1>
                 <h2 className="containerText">Ne pare rau, pagina nu a fost gasita. Vei avea multe de explorat pe pagina principala.</h2>
                 <div >
-                    <Link id="homeButton" to="/homePage">Home</Link>
+                    <Link id="homeButton" to="/">Home</Link>
                 </div>
             </div>
     )

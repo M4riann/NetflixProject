@@ -2,8 +2,8 @@
     left:-3px !important;
     border-radius: 3% !important;
     position: relative;
-    top:-202px;
-    height: 198px;
+    top:-215px;
+    height: 209px;
     background-color: rgba(0, 0, 0, 0.7);
     width: 50px;
     border: none;
@@ -17,8 +17,8 @@
 
 .bigArrowLeft{
     position: relative;
-    top:-319px;
-    height: 300px;
+    top:-321px;
+    height: 310px;
     background-color: rgba(0, 0, 0, 0.7);
     border:none;
     width: 50px;

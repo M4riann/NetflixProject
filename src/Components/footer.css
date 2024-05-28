@@ -1,0 +1,35 @@
+.footer__container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap:30px;
+}
+
+#gitHubIcon{
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    color: white;
+}
+#gitHubIcon:hover{
+    color:gray
+}
+#gitHubIcon:active{
+    color:rgb(70, 70, 70)
+}
+#linkedInIcon{
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    color: white;
+
+}
+
+#linkedInIcon:hover{
+    color:gray
+
+}
+#linkedInIcon:active{
+    color:rgb(70, 70, 70)
+
+}

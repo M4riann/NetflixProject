@@ -10,9 +10,9 @@ import requests from "../requests";
 import GenreSelectedMovies from "./GenreSelectedMovies";
 import NavbarGenres from "../Components/NavbarGenres"
 import GenresButtons from "./GenresButtons";
+import RowBig from "../Components/RowBig"
 const base_url = "https://image.tmdb.org/t/p/original";
-
-const NavbarVideo = ({ isRefresh=false,showGenresButons=true,moviesDescription,isMuted=false ,title="", imageSrc=false, videoSrc=URL, ageRestriction="", navbarGenres=false, notHomePage=false}) =>{
+const NavbarVideo = ({showGenresButons=true,moviesDescription,isMuted=false ,title="", imageSrc=false, videoSrc=URL, ageRestriction="", navbarGenres=false, notHomePage=false}) =>{
     const videoRef = useRef(null);
     const [muted, setMuted] = useState(false);
     const [setTitle, setIsTitle] =  useState("")
@@ -31,9 +31,6 @@ const NavbarVideo = ({ isRefresh=false,showGenresButons=true,moviesDescription,i
   
       }
 
-      // const refresh = (selectedGenre) =>{
-      //   window.location.reload(selectedGenre);
-      // }
    const GenresAudioMissing = () =>{
       window.alert("Nu putem furniza sonor.")
    }
@@ -52,7 +49,7 @@ const NavbarVideo = ({ isRefresh=false,showGenresButons=true,moviesDescription,i
                 <div id="onScreenDetails">
                     <h1 className="strangerThingsTitle MadMaxTtile">{title}</h1>
                     <div style={{marginBottom:"40px"}}>
-                      <p style={{position:"relative",left:"-3%",maxHeight:"8%",maxWidth:"30%", color:"white", fontSize:"25px", fontWeight:"lighter", marginBottom:"20px"}}>{moviesDescription}</p>
+                      <p id="movieDescription" style={{position:"relative",left:"-3%", color:"white", fontSize:"25px", marginBottom:"20px"}}>{moviesDescription}</p>
                     </div>
                     <div className="onScreenButtons"> 
                     <button onClick={AlertPlayHandler} className="strangerThingsPlayButton "> {<FaPlay className="strangerThingsPlayIcon"/>}Redare</button>
@@ -60,7 +57,7 @@ const NavbarVideo = ({ isRefresh=false,showGenresButons=true,moviesDescription,i
                     
                     
                     </div>
-                    {notHomePage? null :  <Row  isBigArrow={true} isBigRow={true} title={NetflixOriginalTitle} fetchUrl={requests.fetchNetflixOriginals}/>}
+                  {notHomePage? null : <RowBig title={NetflixOriginalTitle} fetchUrl={requests.fetchNetflixOriginals} />}
               </div>
              
               </div>

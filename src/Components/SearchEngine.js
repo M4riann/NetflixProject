@@ -5,7 +5,7 @@ import axios from "../axios";
 import { json } from "react-router-dom";
 import NoPage from "../NavbarRoutes/NoPage";
 
-const movieAPI = "https://api.themoviedb.org/3/movie/550?api_key=99bc588833b8b6037db6de38b3d64d46"
+const movieAPI = process.env.TMDB_API_KEY;
 
 const SearchEngine = () =>{
     const [query, setQuery] = useState("");
@@ -28,7 +28,7 @@ const SearchEngine = () =>{
    
       try {
         const response = await axios.get(
-          `https://api.themoviedb.org/3/search/movie?api_key=99bc588833b8b6037db6de38b3d64d46&query=${query}`
+          `https://api.themoviedb.org/3/search/movie?api_key=${process.env.TMDB_API_KEY}&query=${query}`
         );
       
       } catch (error) {

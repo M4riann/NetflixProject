@@ -44,7 +44,7 @@ const Navbar = ({isSearchBarNavbar=false, position="fixed"}) => {
                   >
                      
                     <div className='navBar__homePage'>
-                        <Link className="navBar__home" to="/homePage">{
+                        <Link className="navBar__home" to="/">{
                             <img id="logo" src={require("../images/netflixLogo.png")} alt="netflixLogo"/>
                                                                                                         }
                         </Link>
