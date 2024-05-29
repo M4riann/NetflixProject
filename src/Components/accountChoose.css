@@ -1,0 +1,52 @@
+.visible{
+    z-index: 1000;
+    position:absolute;
+    background-color: #141414;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap:70px
+}
+.invisible{
+    display: none;
+    animation:backwards 2000ms;
+}
+.profilesContainer{
+    display: flex;
+    justify-content: center;
+align-self: center;
+gap:55px
+}
+
+.profileHeader{
+    width: 34%;
+    height: 70px;
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+.profileName{
+    color:gray;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+.accountProfile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profileImage:hover{
+    border: 5px solid white;
+}
+.profileImage{
+    width: 188px;
+    height: 188px;
+    margin-bottom: 15%;
+    cursor: pointer;
+}

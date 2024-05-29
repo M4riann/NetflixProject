@@ -9,12 +9,14 @@ import Filme from './NavbarRoutes/Filme'
 import NoPage from './NavbarRoutes/NoPage';
 import SearchResults from './Components/SearchResults';
 import GenreSelectedMovies from './Components/GenreSelectedMovies';
+import AccountChoose from './Components/AccountChoose';
 
 
 function App() {
   return (
     
     <Fragment>
+      <AccountChoose/>
             <Routes>
                 <Route path='/' element={<HomePage/>}/> 
                 <Route path='/seriale' element={<Seriale/>}/>
